@@ -3,6 +3,7 @@ package xyz.subho.wipro.employeecurd.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import xyz.subho.wipro.employeecurd.entity.EmployeeEntity;
 import xyz.subho.wipro.employeecurd.service.EmployeeService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class HomeController {
