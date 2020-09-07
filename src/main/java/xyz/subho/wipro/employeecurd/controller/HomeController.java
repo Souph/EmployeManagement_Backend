@@ -54,7 +54,7 @@ public class HomeController {
 		try	{
 			return employeeService.findEmployee(empId);
 		}
-		catch(Exception e){
+		catch(Exception e)	{
 			return null;
 		}
 	}
