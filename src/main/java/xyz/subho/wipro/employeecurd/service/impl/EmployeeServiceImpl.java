@@ -34,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		employeeRepository.deleteById(empId);
 	}
-	
+		
 	public void updateEmployee(EmployeeEntity emp)	{
 		
 		employeeRepository.save(emp);

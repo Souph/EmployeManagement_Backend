@@ -31,11 +31,11 @@ public class HomeController {
 		return true;
 	}
 	
-	@PostMapping("/delete/{empId}")
-	public boolean removeEmployee(@PathVariable Long empId)	{
+	@PostMapping("/delete")
+	public boolean removeEmployee(@ModelAttribute EmployeeEntity emp)	{
 		
-		if(employeeService.checkEmpIdExists(empId))	{
-			employeeService.removeEmployee(empId);
+		if(employeeService.checkEmpIdExists(emp.getEmpId()))	{
+			employeeService.removeEmployee(emp.getEmpId());
 			return true;
 		}
 		return false;
@@ -51,10 +51,10 @@ public class HomeController {
 		return false;
 	}
 	
-	@PostMapping("/find/{empId}")
-	public EmployeeEntity findEmployee(@PathVariable Long empId)	{
+	@PostMapping("/find")
+	public EmployeeEntity findEmployee(@ModelAttribute EmployeeEntity emp)	{
 		try	{
-			return employeeService.findEmployee(empId);
+			return employeeService.findEmployee(emp.getEmpId());
 		}
 		catch(Exception e)	{
 			return null;
