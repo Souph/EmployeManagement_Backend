@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import xyz.subho.wipro.employeecurd.entity.EmployeeEntity;
 import xyz.subho.wipro.employeecurd.service.EmployeeService;
@@ -61,7 +62,7 @@ public class HomeController {
 		}
 	}
 	
-	@PostMapping("/view")
+	@GetMapping("/view")
 	public List<EmployeeEntity> viewAllEmployee()	{
 		
 		return employeeService.viewEmployees();
